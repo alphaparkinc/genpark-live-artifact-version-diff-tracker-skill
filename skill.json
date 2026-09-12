@@ -1,0 +1,51 @@
+{
+  "name": "genpark-live-artifact-version-diff-tracker-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Real-time in-memory unified diff and change telemetry generator for collaborative AI canvas and live code artifact editors.",
+  "homepage": "https://genpark.ai/mcp",
+  "author": "genpark",
+  "category": "artifact-collaboration",
+  "tags": [
+    "artifacts",
+    "version-diff",
+    "unified-diff",
+    "canvas-editor",
+    "change-tracking"
+  ],
+  "inputs": {
+    "artifact_name": {
+      "type": "string",
+      "default": "pricing_table.html"
+    },
+    "original_content": {
+      "type": "string",
+      "default": "<div class=\"price\">$99</div>"
+    },
+    "revised_content": {
+      "type": "string",
+      "default": "<div class=\"price font-bold text-green-500\">$79</div>"
+    }
+  },
+  "outputs": {
+    "diff_id": {
+      "type": "string"
+    },
+    "has_changes": {
+      "type": "boolean"
+    },
+    "added_lines_count": {
+      "type": "integer"
+    },
+    "removed_lines_count": {
+      "type": "integer"
+    },
+    "unified_diff_text": {
+      "type": "string"
+    },
+    "diff_preview_url": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
